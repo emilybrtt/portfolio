@@ -1,0 +1,157 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: #e6875e;
+    font-style: italic ;
+
+}
+* {
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 42px;
+    color: #e6875e;
+}
+
+.container{
+    position: absolute;
+    background-color: #ffffff ;
+}
+
+/* MENU */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #7b8d80;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+    padding: 10px 30px;
+    margin: 0px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu li {
+    padding: 0;
+}
+
+/* Hover */
+.menu a:hover{
+    background-color: #617266;
+}
+
+
+/* SOBRE MIM */
+.sobre-mim{
+background-color: #2D2F3A;
+padding: 100px;
+max-width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;    
+gap: 30px;
+}
+
+.sobre-mim h1{
+    font-size: 60px;
+}
+
+.sobre-mim p{
+    font-size: 24px;
+    color: #FFF;
+}
+
+.sobre-mim-p-container{
+    max-width: 60%;
+
+    flex: 1;
+}
+
+.img-container{
+    flex: 1;
+    text-align: right;
+    min-width: 300px;
+}
+
+.img-container img{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    border-radius: 100%;
+    border: 5px rgba(255, 255, 255, 0.856) solid;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.icons ul{
+    padding: 0%;
+    margin-top: 100px;
+}
+
+.icons li {
+    background-color: antiquewhite;
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 70px;
+    margin-right: 50px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    color: #2D2F3A;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover */
+.icons ul :hover{
+    background-color: rgb(153, 144, 132);
+    cursor: pointer;
+    color: #31333ad5;
+}
+.img-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Lista formação acadêmica */
+.academico li{
+    color: #2D2F3A;
+
+}
