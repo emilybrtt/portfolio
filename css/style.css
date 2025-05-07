@@ -45,7 +45,7 @@ h3{
   }
   
   #logo img {
-    width: 50px;
+    width: 70px;
     height: auto;
   }
   #logo a {
@@ -94,6 +94,7 @@ h3{
     padding: 10px 20px;
     border-radius: 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 10px;
 }
 
 .menu li {
@@ -367,3 +368,27 @@ gap: 30px;
     right: 10px;
   }
   
+/* CONTATO */
+.contato ul li{
+  display: inline-block;
+  padding: 50px;
+
+}
+.contato ul{
+  list-style: none;
+  text-align: center;
+}
+.contato ul img{
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+
+}
+.contato p{font-size: 24px;
+  color: #2D2F3A;
+  text-align: center;
+  
+}
+.contato ul :hover{
+  transform: scale(1.02);
+}
