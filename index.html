@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,6 +12,7 @@
 <div class="menu-container">
      <nav class="menu">
          <ul>
+            <li id="logo"> <a href="#sobre-mim"><img src="css/img/logo.png" alt="logo"></a></li>
              <li> <a href="#sobre-mim">Sobre mim</a></li>
              <li> <a href="#academico">Trajetória acadêmica</a></li>
              <li> <a href="#projetos">Projetos</a></li>
@@ -94,13 +96,114 @@
 </div>
 
     <!-- PROJETOS -->
-     <div id="projetos"></div>
+
      <div class="container_projeto">
 
-         <h1>Projetos</h1>
-         
+<div id="projetos">
+    <h1>Projetos</h1>
+    <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-content">
+            <div class="project active">
+                <h3>Pygame: O Quebra-Nozes</h3>
+                <div class="project-body">
+                  <div class="project-image-carousel">
+                    <img src="css/img/nutcracker.png" alt="Imagem do projeto" class="active-img">
+                    <img src="css/img/fase1.png" alt="Imagem do projeto">
+                    <img src="css/img/fase3.png" alt="Imagem do projeto">
+                    <img src="css/img/fase4.png" alt="Imagem do projeto">
+                    <img src="css/img/fase5.png" alt="Imagem do projeto">
+                    <img src="css/img/map.png" alt="Imagem do projeto">
+
+                    <button class="img-btn prev-img">&#10094;</button>
+                    <button class="img-btn next-img">&#10095;</button>
+                  </div>
+                  <div class="project-description">
+                    <p>Projeto inspirado em um balé de repertório clássico, com 5 fases únicas interligadas por um mapa overworld. <br/><br/>Desenvolvido em Pygame em apenas duas semanas, conta com animações quadro a quadro, telas personalizadas de instrução e feedback, além de mecânicas e inimigos exclusivos por fase.</p>
+                </div>
+                </div>
+              </div>
+      
+              <div class="project active">
+                <h3>Site Informar- GAS</h3>
+                <div class="project-body">
+                  <div class="project-image-carousel">
+                    <img src="css/img/informar.png" alt="Apresentação do site">
+                    <img src="css/img/informar_ex.png" alt="Página de exercício do site">
+                    <img src="css/img/informa.png" alt="Página de exercício do site">
+                    <button class="img-btn prev-img">&#10094;</button>
+                    <button class="img-btn next-img">&#10095;</button>
+                  </div>
+                  <div class="project-description">
+                    <p>Plataforma de exercícios desenvolvida para o Insper Code em parceria com o projeto Informar (GAS), com foco em oferecer prática contínua aos alunos após as aulas. O sistema é dinâmico, responsivo e voltado ao engajamento educacional.
+                        <br/>
+                        <br/>
+                Com Front-End em ReactJS + Vite; Back-End em Python + FastAPI; banco de dados via PostgreSQL e deploy via Vercel</p>
+                    </div>
+                </div>
+              </div>
+
+
+            <!-- Adicione mais projetos aqui -->
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+</div>
+
         </div>
          <!-- CONTATO -->
 </div>
 </body>
 </html>
+
+
+<script>
+    const projects = document.querySelectorAll('.project');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    let currentIndex = 0;
+
+    function showProject(index) {
+        projects.forEach((project, i) => {
+            project.classList.toggle('active', i === index);
+        });
+    }
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % projects.length;
+        showProject(currentIndex);
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+        showProject(currentIndex);
+    });
+
+    showProject(currentIndex); // Inicial
+</script>
+<script>
+    document.querySelectorAll('.project').forEach(project => {
+      const images = project.querySelectorAll('img');
+      let current = 0;
+      const updateImages = () => {
+        images.forEach((img, i) => {
+          img.classList.toggle('active-img', i === current);
+        });
+      };
+    
+      project.querySelector('.prev-img').addEventListener('click', () => {
+        current = (current - 1 + images.length) % images.length;
+        updateImages();
+      });
+    
+      project.querySelector('.next-img').addEventListener('click', () => {
+        current = (current + 1) % images.length;
+        updateImages();
+      });
+    
+      updateImages(); // Inicializa
+    });
+    </script>
+    
