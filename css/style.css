@@ -6,7 +6,9 @@ h1 {
     font-size: 48px;
     color: #e6875e;
     font-style: italic ;
-
+    padding: 150px 100px 25px 100px ;
+    text-align: center;
+    
 }
 * {
     box-sizing: border-box;
@@ -15,6 +17,16 @@ h1 {
 h2{
     font-size: 42px;
     color: #e6875e;
+}
+
+#prazer{padding:0px; text-align: left;}
+
+h3{
+    font-size: 30px;
+    color: #2D2F3A;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 25px;
 }
 
 .container{
@@ -67,6 +79,7 @@ h2{
     background-color: #617266;
 }
 
+#prazer{padding: 0%;}
 
 /* SOBRE MIM */
 .sobre-mim{
@@ -91,7 +104,6 @@ gap: 30px;
 
 .sobre-mim-p-container{
     max-width: 60%;
-
     flex: 1;
 }
 
@@ -139,6 +151,7 @@ gap: 30px;
     cursor: pointer;
     color: #31333ad5;
 }
+
 .img-container img:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
@@ -146,12 +159,80 @@ gap: 30px;
 }
 
 
+/* Formação acadêmica */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
 
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #2D2F3A;
+    transform: translateX(-50%);
+    z-index: 0;
+}
 
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
 
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+}
 
-/* Lista formação acadêmica */
-.academico li{
-    color: #2D2F3A;
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #2D2F3A;
+    border-radius: 50%;
+    z-index: 1;
+}
 
+.timeline-content {
+    background-color: transparent;
+    z-index: 1;
+    text-align: justify;
+}
+
+.timeline-content ul {
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.timeline-content ul li {
+    list-style: none;
+    margin-bottom: 25px;
+    background-color: #50535f;
+    color: white;
+    border-radius: 25px;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-content li:hover {
+    background-color: #2D2F3A;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.container_projeto{
+    background-color: #2D2F3A;
 }
