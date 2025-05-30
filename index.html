@@ -1,207 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emily Britto- Portfolio</title>
-    <link rel="icon" type="logo/png" href="css/img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+    <title>Emily Britto - Portfolio</title>
+
 </head>
 <body>
-<!-- MENU -->
-<div class="menu-container">
-     <nav class="menu">
-         <ul>
-            <li id="logo"> <a href="#sobre-mim"><img src="css/img/logo.png" alt="logo"></a></li>
-             <li> <a href="#sobre-mim">Sobre mim</a></li>
-             <li> <a href="#academico">Trajetória acadêmica</a></li>
-             <li> <a href="#projetos">Projetos</a></li>
-             <li> <a href="#contato">Contato</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">Emily Britto</a>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Sobre</a></li>
+                <li><a href="#academico" class="nav-link">Formação</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
-        </nav>
-</div>
-
-<div class="container">
-    <!-- SOBRE MIM -->
-    <div id="sobre-mim"></div> 
-    <div class="sobre-mim">
-        <div class="sobre-mim-p-container">
-        <h1 id="prazer">Prazer!</h1>
-        <h2>Meu nome é Emily de Britto</h2>
-            <p>Sou de Araras — uma cidadezinha charmosa no interior de São Paulo — e sou apaixonada por arte, comunicação e tecnologia. Estudo Ciência da Computação no Insper e acredito que o código é, sim, uma forma de expressão criativa.
-            </p>
-            <div class="icons">
-                <ul>
-                    <li>Python</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+    </nav>
 
-        <div class="img-container">
-            <figure>
-                <img src="css/img/emily.jpg" alt="uma foto minha, com os cabelos soltos e ondulados, um pouco acima do ombro">
-            </figure>
-
-        </div>
-    </div>
-
-    <!-- FORMAÇÃO ACADÊMICA -->
-<div class="academico">
-    <div id="academico"></div> 
-
-    <h1>Formação Acadêmica</h1>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>Ensino Fundamental</h3>
-                <ul>
-                    <li>Olimpíada Brasileira de Astronomia e Astronáutica</li>
-                    <li>Olimpíada Brasileira de Matemática das Escolas Públicas</li>
-                    <li>Olimpíada Paulista de Física</li>
-                    <li>Maratona do Conhecimento Rede Pitágoras</li>
-                    <li>Concurso Internacional de desenho Cartaz da Paz</li>
-                    <li>First Cambridge English- FCE aos 13 anos</li>
-                </ul>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Olá, sou a <span class="highlight">Emily</span></h1>
+                <p>Desenvolvedora apaixonada por tecnologia, arte e comunicação. Estudo Ciência da Computação no Insper e acredito que código é uma forma de expressão criativa.</p>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="css\img\emily.jpg" alt="Emily de Britto" class="profile-img">
             </div>
         </div>
+    </section>
 
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>Ensino Médio</h3>
-                <ul>
-                    <li>Publicação de textos na Festa Literária de Araras – FLAP</li>
-                    <li>Desafio Nacional Acadêmico – DNA (líder de equipe)</li>
-                    <li>Eletiva Hackeando a Vida</li>
-                    <li>Observatório de Problemas Sociais</li>
-                    <li>Olimpíada Brasileira de Matemática das Escolas Públicas</li>
-                    <li>Trabalho voluntário na OSAF Araras</li>
-                </ul>
+    <!-- Academic Timeline -->
+    <section id="academico" class="section academic">
+        <h2 class="section-title">Formação Acadêmica</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Ensino Fundamental</h3>
+                    <ul>
+                        <li>Olimpíada Brasileira de Astronomia e Astronáutica</li>
+                        <li>Olimpíada Brasileira de Matemática das Escolas Públicas</li>
+                        <li>Olimpíada Paulista de Física</li>
+                        <li>First Cambridge English - FCE aos 13 anos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Ensino Médio</h3>
+                    <ul>
+                        <li>Publicação de textos na Festa Literária de Araras – FLAP</li>
+                        <li>Desafio Nacional Acadêmico – DNA (líder de equipe)</li>
+                        <li>Eletiva Hackeando a Vida</li>
+                        <li>Trabalho voluntário na OSAF Araras</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Graduação</h3>
+                    <ul>
+                        <li>Graduação em Ciência da Computação no Insper (bolsa integral)</li>
+                        <li>Coordenação de projeto na Organização Estudantil InsperCode</li>
+                        <li>Membro e marketing da Organização Estudantil InsperSec</li>
+                        <li>Curso de extensão na FFLCH–USP</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h3>Graduação</h3>
-                <ul>
-                    <li>Aprovação na USP, UNESP, PUCCamp e Insper – com bolsa integral</li>
-                    <li>Curso de extensão na FFLCH–USP</li>
-                    <li>Graduação em Ciência da Computação no Insper (bolsa integral)</li>
-                    <li>Coordenação de projeto na Organização Estudantil InsperCode</li>
-                    <li>Membro e marketing da Organização Estudantil InsperSec</li>
-                </ul>
+    <!-- Projects Section -->
+    <section id="projetos" class="section projects">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-images">
+                    <img src="css\img\nutcracker.png" alt="Pygame: O Quebra-Nozes" class="project-img" data-project="0" data-img="0">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop" alt="Fase do jogo" class="project-img" data-project="0" data-img="1" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1486312338219-ce68e2c6b7e8?w=600&h=400&fit=crop" alt="Mapa do jogo" class="project-img" data-project="0" data-img="2" style="display: none;">
+                    <button class="project-nav prev" data-project="0">‹</button>
+                    <button class="project-nav next" data-project="0">›</button>
+                </div>
+                <div class="project-content">
+                    <h3>Pygame: O Quebra-Nozes</h3>
+                    <p>Jogo inspirado no balé clássico com 5 fases únicas e mapa overworld. Desenvolvido em Pygame com animações frame-by-frame, telas personalizadas e mecânicas exclusivas por fase.</p>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-images">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Site Informar - GAS" class="project-img" data-project="1" data-img="0">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard" class="project-img" data-project="1" data-img="1" style="display: none;">
+                    <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop" alt="Interface" class="project-img" data-project="1" data-img="2" style="display: none;">
+                    <button class="project-nav prev" data-project="1">‹</button>
+                    <button class="project-nav next" data-project="1">›</button>
+                </div>
+                <div class="project-content">
+                    <h3>Site Informar - GAS</h3>
+                    <p>Plataforma educacional desenvolvida para o Insper Code em parceria com o projeto GAS. Sistema responsivo com React, FastAPI, PostgreSQL e deploy na Vercel.</p>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-    <!-- PROJETOS -->
-
-     <div class="container_projeto">
-
-<div id="projetos">
-    <h1>Projetos</h1>
-    <div class="carousel">
-        <button class="carousel-btn prev">&#10094;</button>
-
-        <div class="carousel-content">
-            <div class="project active">
-                <h3>Pygame: O Quebra-Nozes</h3>
-                <div class="project-body">
-                  <div class="project-image-carousel">
-                    <img src="css/img/nutcracker.png" alt="Imagem do projeto" class="active-img">
-                    <img src="css/img/fase1.png" alt="Imagem do projeto">
-                    <img src="css/img/fase3.png" alt="Imagem do projeto">
-                    <img src="css/img/fase4.png" alt="Imagem do projeto">
-                    <img src="css/img/fase5.png" alt="Imagem do projeto">
-                    <img src="css/img/map.png" alt="Imagem do projeto">
-
-                    <button class="img-btn prev-img">&#10094;</button>
-                    <button class="img-btn next-img">&#10095;</button>
-                  </div>
-                  <div class="project-description">
-                    <p>Projeto inspirado em um balé de repertório clássico, com 5 fases únicas interligadas por um mapa overworld. <br/><br/>Desenvolvido em Pygame em apenas duas semanas, conta com animações quadro a quadro, telas personalizadas de instrução e feedback, além de mecânicas e inimigos exclusivos por fase.</p>
-                </div>
-                </div>
-              </div>
-      
-              <div class="project active">
-                <h3>Site Informar- GAS</h3>
-                <div class="project-body">
-                  <div class="project-image-carousel">
-                    <img src="css/img/informar.png" alt="Apresentação do site">
-                    <img src="css/img/informar_ex.png" alt="Página de exercício do site">
-                    <img src="css/img/informa.png" alt="Página de exercício do site">
-                    <button class="img-btn prev-img">&#10094;</button>
-                    <button class="img-btn next-img">&#10095;</button>
-                  </div>
-                  <div class="project-description">
-                    <p>Plataforma de exercícios desenvolvida para o Insper Code em parceria com o projeto Informar (GAS), com foco em oferecer prática contínua aos alunos após as aulas. O sistema é dinâmico, responsivo e voltado ao engajamento educacional.
-                        <br/>
-                        <br/>
-                Com Front-End em ReactJS + Vite; Back-End em Python + FastAPI; banco de dados via PostgreSQL e deploy via Vercel</p>
-                    </div>
-                </div>
-              </div>
-
-
-            <!-- Adicione mais projetos aqui -->
+    <!-- Contact Section -->
+    <section id="contato" class="section contact">
+        <div class="contact-content">
+            <h2 class="section-title">Vamos conversar?</h2>
+            <p>Interessado em colaborar ou apenas bater um papo sobre tecnologia? Ficarei feliz em conectar!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/emilybrtt/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/emilybrtt" target="_blank" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    </svg>
+                </a>
+                <a href="mailto:debrittoemily@gmail.com" class="social-link" aria-label="Email">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.998L12 13.547l9.366-9.726h.998c.904 0 1.636.732 1.636 1.636z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
+    </section>
 
-        <button class="carousel-btn next">&#10095;</button>
-    </div>
-</div>
+    <script>
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
 
-        </div>
-    
-    <!-- CONTATO -->
-     <div class="contato">
-        <div id="contato">
-            <h1>Vamos criar algo juntos?</h1>
-            <p>Se você gostou do que viu por aqui e quer trocar uma ideia, tirar dúvidas ou até começar um projeto incrível juntos, é só me chamar!</p>
-            <div class="icons_contato">
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/emilybrtt/" target="_blank"><img src="css/img/linkedin.webp.png" alt="LinkedIn"></a></li>
-                    <li><a href="https://github.com/emilybrtt" target="_blank"><img src="css/img/git.png" alt="GitHub"></a></li>
-                    <li><a href="mailto:debrittoemily@gmail.com" target= "blank"><img src="css/img/email.png" alt="Email"></a></li>
-                      </a>
-                </div>
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
 
-            </ul>
-        </div>
-     </div>
-</div>
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Project Image Navigation
+        const projects = document.querySelectorAll('.project-images');
+        
+        projects.forEach(project => {
+            const images = project.querySelectorAll('.project-img');
+            const prevBtn = project.querySelector('.prev');
+            const nextBtn = project.querySelector('.next');
+            const projectId = prevBtn.dataset.project;
+            let currentImg = 0;
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.style.display = i === index ? 'block' : 'none';
+                });
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentImg = currentImg > 0 ? currentImg - 1 : images.length - 1;
+                showImage(currentImg);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentImg = currentImg < images.length - 1 ? currentImg + 1 : 0;
+                showImage(currentImg);
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
-
-
-<!-- JavaScript para as galerias de fotos -->
-<script>
-    const projects = document.querySelectorAll('.project');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
-    let currentIndex = 0;
-
-    function showProject(index) {
-        projects.forEach((project, i) => {
-            project.classList.toggle('active', i === index);
-        });
-    }
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % projects.length;
-        showProject(currentIndex);
-    });
-
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-        showProject(currentIndex);
-    });
-
-    showProject(currentIndex); // Inicial
-</script>
-<script>
     document.querySelectorAll('.project').forEach(project => {
       const images = project.querySelectorAll('img');
       let current = 0;
