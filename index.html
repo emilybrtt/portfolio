@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="css/img/favicon.svg">
+    <title>Emily Britto - Portfolio</title>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">Emily Britto</a>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Sobre</a></li>
+                <li><a href="#academico" class="nav-link">Formação</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="mkt.html" class="nav-link">Marketing</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Olá, sou a <span class="highlight">Emily</span></h1>
+                <p>Desenvolvedora apaixonada por tecnologia, arte e comunicação. Estudo Ciência da Computação no Insper e acredito que código é uma forma de expressão criativa.</p>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Godot</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="css\img\emily.jpg" alt="Emily de Britto" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Timeline -->
+    <section id="academico" class="section academic">
+        <h2 class="section-title">Formação Acadêmica</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Ensino Fundamental</h3>
+                    <ul>
+                        <li>Olimpíada Brasileira de Astronomia e Astronáutica</li>
+                        <li>Olimpíada Brasileira de Matemática das Escolas Públicas</li>
+                        <li>Olimpíada Paulista de Física</li>
+                        <li>First Cambridge English - FCE aos 13 anos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Ensino Médio</h3>
+                    <ul>
+                        <li>Publicação de textos na Festa Literária de Araras – FLAP</li>
+                        <li>Desafio Nacional Acadêmico – DNA (líder de equipe)</li>
+                        <li>Eletiva Hackeando a Vida</li>
+                        <li>Trabalho voluntário na OSAF Araras</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Graduação</h3>
+                    <ul>
+                        <li>Graduação em Ciência da Computação no Insper (bolsa integral)</li>
+                        <li>Coordenação de projeto na Organização Estudantil InsperCode</li>
+                        <li>Membro e marketing da Organização Estudantil InsperSec</li>
+                        <li>Curso de extensão na FFLCH–USP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos" class="section projects">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-images">
+                    <img src="css\img\nutcracker/nutcracker.png" alt="Pygame: O Quebra-Nozes" class="project-img" data-project="0" data-img="0">
+                    <img src="css\img\nutcracker\map.png" alt="Fase do jogo" class="project-img" data-project="0" data-img="1" style="display: none;">
+                    <img src="css\img\nutcracker\fase1.png" alt="Mapa do jogo" class="project-img" data-project="0" data-img="2" style="display: none;">
+                    <img src="css\img\nutcracker\fase3.png" alt="Mapa do jogo" class="project-img" data-project="0" data-img="2" style="display: none;">
+                    <img src="css\img\nutcracker\fase4.png" alt="Mapa do jogo" class="project-img" data-project="0" data-img="2" style="display: none;">
+                    <img src="css\img\nutcracker\fase5.png" alt="Mapa do jogo" class="project-img" data-project="0" data-img="2" style="display: none;">
+                    <button class="project-nav prev" data-project="0">‹</button>
+                    <button class="project-nav next" data-project="0">›</button>
+                </div>
+                <div class="project-content">
+                    <h3>Pygame: O Quebra-Nozes</h3>
+                    <p>Jogo inspirado no balé clássico com 5 fases únicas e mapa overworld. Desenvolvido em Pygame com animações frame-by-frame, telas personalizadas e mecânicas exclusivas por fase.</p>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-images">
+                    <img src="css\img\informar/informa.png" alt="Site Informar - GAS" class="project-img" data-project="1" data-img="0">
+                    <img src="css\img\informar/informar_ex.png" alt="Dashboard" class="project-img" data-project="1" data-img="1" style="display: none;">
+                    <img src="css\img\informar/informa.png" alt="Interface" class="project-img" data-project="1" data-img="2" style="display: none;">
+                    <button class="project-nav prev" data-project="1">‹</button>
+                    <button class="project-nav next" data-project="1">›</button>
+                </div>
+                <div class="project-content">
+                    <h3>Site Informar - GAS</h3>
+                    <p>Plataforma educacional desenvolvida para o Insper Code em parceria com o projeto GAS. Sistema responsivo com React, FastAPI, PostgreSQL e deploy na Vercel.</p>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-images">
+                    <img src="css\img\help_the_fox\1.png" alt="Menu principal" class="project-img" data-project="2" data-img="0">
+                    <img src="css\img\help_the_fox\2.png" alt="Fase do jogo" class="project-img" data-project="2" data-img="1" style="display: none;">
+                    <img src="css\img\help_the_fox\3.png" alt="Tela estática" class="project-img" data-project="2" data-img="2" style="display: none;">
+                    <img src="css\img\help_the_fox\4.png" alt="Tela estática de inserção de senha" class="project-img" data-project="2" data-img="3" style="display: none;">
+                    <button class="project-nav prev" data-project="2">‹</button>
+                    <button class="project-nav next" data-project="2">›</button>
+                </div>
+                <div class="project-content">
+                    <h3>Help the Fox</h3>
+                    <p>Escape Room desenvolvido para o Insper Code a fim de arrecadar fundos para o Programa de Bolsas. O jogo em Godot mescla ambientes físicos e digitais e possui artes e minigames autorais.</p>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-images">
+                    <img src="css/img/sprint25.1/login.png" alt="Tela de login" class="project-img" data-project="3" data-img="0" style="display: none;">
+                    <img src="css/img/sprint25.1/aviso.png" alt="Aviso anterior ao questionário" class="project-img" data-project="3" data-img="1">
+                    <img src="css/img/sprint25.1/cadastro.png" alt="Tela de cadastro" class="project-img" data-project="3" data-img="2" style="display: none;">
+                    <img src="css/img/sprint25.1/medico.png" alt="Painel de usuário do tipo médico" class="project-img" data-project="3" data-img="3" style="display: none;">
+                    <img src="css/img/sprint25.1/paciente.png" alt="Painel de usuário do tipo paciente" class="project-img" data-project="3" data-img="4" style="display: none;">
+                    <img src="css/img/sprint25.1/questionario.png" alt="Pergunta padrão dentro do questionario" class="project-img" data-project="3" data-img="5" style="display: none;">
+                    <img src="css/img/sprint25.1/senha.png" alt="Tela retornando divergência de cenas" class="project-img" data-project="3" data-img="6" style="display: none;">
+                    <button class="project-nav prev" data-project="3">‹</button>
+                    <button class="project-nav next" data-project="3">›</button>
+                </div>
+                <div class="project-content">
+                    <h3>Plataforma de Questionários - Sono 360</h3>
+                    <p>Aplicação Django desenvolvida por 6 estudantes em parceria com a empresa Sono 360. Permite envio de questionários, coleta de respostas e importação de dados via CSV.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section contact">
+        <div class="contact-content">
+            <h2 class="section-title">Vamos conversar?</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/emilybrtt/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/emilybrtt" target="_blank" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    </svg>
+                </a>
+                <a href="mailto:debrittoemily@gmail.com" class="social-link" aria-label="Email">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.998L12 13.547l9.366-9.726h.998c.904 0 1.636.732 1.636 1.636z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Project Image Navigation
+        const projects = document.querySelectorAll('.project-images');
+        
+        projects.forEach(project => {
+            const images = project.querySelectorAll('.project-img');
+            const prevBtn = project.querySelector('.prev');
+            const nextBtn = project.querySelector('.next');
+            const projectId = prevBtn.dataset.project;
+            let currentImg = 0;
+
+            function showImage(index) {
+                images.forEach((img, i) => {
+                    img.style.display = i === index ? 'block' : 'none';
+                });
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentImg = currentImg > 0 ? currentImg - 1 : images.length - 1;
+                showImage(currentImg);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentImg = currentImg < images.length - 1 ? currentImg + 1 : 0;
+                showImage(currentImg);
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+<script>
+    document.querySelectorAll('.project').forEach(project => {
+      const images = project.querySelectorAll('img');
+      let current = 0;
+      const updateImages = () => {
+        images.forEach((img, i) => {
+          img.classList.toggle('active-img', i === current);
+        });
+      };
+    
+      project.querySelector('.prev-img').addEventListener('click', () => {
+        current = (current - 1 + images.length) % images.length;
+        updateImages();
+      });
+    
+      project.querySelector('.next-img').addEventListener('click', () => {
+        current = (current + 1) % images.length;
+        updateImages();
+      });
+    
+      updateImages(); // Inicializa
+    });
+    </script>
+    
