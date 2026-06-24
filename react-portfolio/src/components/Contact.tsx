@@ -1,4 +1,5 @@
-import type { ReactElement } from 'react'
+import type { ReactElement, FormEvent } from 'react'
+import { useState } from 'react'
 import { socialLinks } from '../data/portfolio'
 
 type IconName = 'linkedin' | 'github' | 'email'
@@ -21,19 +22,124 @@ const ICONS: Record<IconName, ReactElement> = {
   ),
 }
 
-const Contact = () => (
-  <section id="contato" className="section contact">
-    <div className="contact-content" data-fade>
-      <h2 className="section-title">Vamos conversar?</h2>
-      <div className="social-links">
-        {socialLinks.map(({ href, label, icon }) => (
-          <a key={label} href={href} className="social-link" target="_blank" rel="noopener" aria-label={label}>
-            {ICONS[icon as IconName]}
-          </a>
-        ))}
+type FormState = 'idle' | 'sending' | 'success' | 'error'
+
+const Contact = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [status, setStatus] = useState<FormState>('idle')
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    setStatus('sending')
+
+    try {
+      const SERVICE_ID = 'service_brttemily'
+      const TEMPLATE_ID = 'template_t3vrhpa'
+      const PUBLIC_KEY = 'Mj8Mz5xDPA1YFzIPA'
+
+      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: SERVICE_ID,
+          template_id: TEMPLATE_ID,
+          user_id: PUBLIC_KEY,
+          template_params: { from_name: name, from_email: email, message },
+        }),
+      })
+
+      if (!res.ok) throw new Error()
+      setStatus('success')
+      setName('')
+      setEmail('')
+      setMessage('')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  return (
+    <section id="contato" className="section contact">
+      <div className="contact-content" data-fade>
+       <h1>Vamos conversar?</h1>
+
+        <div className="contact-layout">
+          <form className="contact-form" onSubmit={handleSubmit} noValidate>
+            <div className="contact-fields-row">
+              <div className="contact-field">
+                <label htmlFor="contact-name">Nome</label>
+                <input
+                  id="contact-name"
+                  type="text"
+                  placeholder="Seu nome"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
+                  required
+                  disabled={status === 'sending'}
+                />
+              </div>
+              <div className="contact-field">
+                <label htmlFor="contact-email">E-mail</label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  required
+                  disabled={status === 'sending'}
+                />
+              </div>
+            </div>
+
+            <div className="contact-field">
+              <label htmlFor="contact-message">Mensagem</label>
+              <textarea
+                id="contact-message"
+                placeholder="Escreva sua mensagem..."
+                rows={5}
+                value={message}
+                onChange={e => setMessage(e.target.value)}
+                required
+                disabled={status === 'sending'}
+              />
+            </div>
+
+            <div className="contact-form-footer">
+              <button
+                type="submit"
+                className="button button-primary contact-submit"
+                disabled={status === 'sending'}
+              >
+                {status === 'sending' ? 'Enviando…' : 'Enviar mensagem'}
+              </button>
+
+              {status === 'success' && (
+                <p className="contact-feedback contact-feedback--success">
+                  ✓ Mensagem enviada! Em breve entro em contato.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="contact-feedback contact-feedback--error">
+                  Algo deu errado. Tente novamente.
+                </p>
+              )}
+            </div>
+          </form>
+
+          <div className="social-links">
+            {socialLinks.map(({ href, label, icon }) => (
+              <a key={label} href={href} className="social-link" target="_blank" rel="noopener" aria-label={label}>
+                {ICONS[icon as IconName]}
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 export default Contact

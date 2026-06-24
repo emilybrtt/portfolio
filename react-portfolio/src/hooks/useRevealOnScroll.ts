@@ -1,17 +1,11 @@
 import { useEffect } from 'react'
-import DocumentGallery from '../components/DocumentGallery'
-import MarketingHero from '../components/MarketingHero'
-import PostGallery from '../components/PostGallery'
 
-const Marketing = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [])
-
+const useRevealOnScroll = () => {
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('[data-fade]'))
+
     if (!elements.length) {
-      return
+      return undefined
     }
 
     const observer = new IntersectionObserver(
@@ -30,14 +24,6 @@ const Marketing = () => {
 
     return () => observer.disconnect()
   }, [])
-
-  return (
-    <>
-      <MarketingHero />
-      <PostGallery />
-      <DocumentGallery />
-    </>
-  )
 }
 
-export default Marketing
+export default useRevealOnScroll

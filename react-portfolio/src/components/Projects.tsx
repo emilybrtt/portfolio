@@ -8,72 +8,67 @@ type ProjectImage = {
 
 type Project = {
   title: string
+  category: string
   description: string
   images: ProjectImage[]
 }
 
-const ProjectCard = ({ project }: { project: Project }) => {
-  const [currentImage, setCurrentImage] = useState(0)
-  const totalImages = project.images.length
-
-  const showPrevious = () => {
-    setCurrentImage((index) => (index - 1 + totalImages) % totalImages)
-  }
-
-  const showNext = () => {
-    setCurrentImage((index) => (index + 1) % totalImages)
-  }
+const Projects = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const activeProject = projects[activeIndex] as Project
+  const activeImage = activeProject.images[0]
 
   return (
-    <article className="project-card" data-fade>
-      <div className="project-images">
-        {project.images.map((image, index) => (
+    <section id="projetos" className="section projects work-page">
+      <div className="work-layout" data-fade>
+        <div className="work-preview" aria-live="polite">
           <img
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            className="project-img"
-            style={{ display: index === currentImage ? 'block' : 'none' }}
+            key={activeImage.src}
+            src={activeImage.src}
+            alt={activeImage.alt}
+            className="work-preview-img"
           />
-        ))}
-        {totalImages > 1 ? (
-          <>
-            <button
-              type="button"
-              className="project-nav prev"
-              onClick={showPrevious}
-              aria-label={`Mostrar imagem anterior de ${project.title}`}
-            >
-              ‹
-            </button>
-            <button
-              type="button"
-              className="project-nav next"
-              onClick={showNext}
-              aria-label={`Mostrar próxima imagem de ${project.title}`}
-            >
-              ›
-            </button>
-          </>
-        ) : null}
+          <div className="work-preview-overlay">
+            <span>{activeProject.category}</span>
+            <strong>{activeProject.title}</strong>
+          </div>
+        </div>
+
+        <div className="work-list-panel">
+          <div className="work-header">
+            <h1>Projetos</h1>
+            <span>{projects.length}</span>
+          </div>
+
+          <div className="work-list" role="list">
+            {projects.map((project, index) => {
+              const isActive = index === activeIndex
+
+              return (
+                <button
+                  type="button"
+                  key={project.title}
+                  className={`work-row${isActive ? ' active' : ''}`}
+                  onClick={() => setActiveIndex(index)}
+                  onFocus={() => setActiveIndex(index)}
+                  onPointerEnter={() => setActiveIndex(index)}
+                  role="listitem"
+                >
+                  <span className="work-arrow" aria-hidden="true">
+                    →
+                  </span>
+                  <span className="work-title">{project.title}</span>
+                  <span className="work-category">{project.category}</span>
+                </button>
+              )
+            })}
+          </div>
+
+          <p className="work-description">{activeProject.description}</p>
+        </div>
       </div>
-      <div className="project-content">
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-      </div>
-    </article>
+    </section>
   )
 }
-
-const Projects = () => (
-  <section id="projetos" className="section projects">
-    <h2 className="section-title">Projetos</h2>
-    <div className="projects-grid">
-      {projects.map((project) => (
-        <ProjectCard key={project.title} project={project} />
-      ))}
-    </div>
-  </section>
-)
 
 export default Projects

@@ -1,14 +1,14 @@
-import Hero from '../components/Hero'
+import Projects from '../components/Projects'
 import useRevealOnScroll from '../hooks/useRevealOnScroll'
 
-const Home = () => {
+const ProjectsPage = () => {
   useRevealOnScroll()
 
   return (
     <div className="page-surface">
-      <Hero />
+      <Projects />
     </div>
   )
 }
 
-export default Home
+export default ProjectsPage

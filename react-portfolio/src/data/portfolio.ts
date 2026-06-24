@@ -1,10 +1,18 @@
 export const heroContent = {
   name: 'Emily',
   greeting: 'Olá, sou a',
+  subtitle: 'Desenvolvedora apaixonada por tecnologia, arte e comunicação.',
   description:
-    'Desenvolvedora apaixonada por tecnologia, arte e comunicação. Estudo Ciência da Computação no Insper e acredito que código é uma forma de expressão criativa.',
+    'Estudo Ciência da Computação no Insper e acredito que código também é uma forma de expressão criativa.',
   image: '/img/emily.jpg',
   skills: ['Python', 'HTML/CSS', 'JavaScript', 'Godot'],
+}
+
+export const aboutContent = {
+  eyebrow: 'Sobre mim',
+  title: 'Sobre',
+  description:
+    'Sou estudante de Ciência da Computação no Insper e gosto de construir experiências digitais que unem lógica, estética e propósito. Minha trajetória passa por desenvolvimento, UI/UX, jogos, projetos estudantis e comunicação, sempre com a vontade de transformar ideias em interfaces claras, criativas e úteis.',
 }
 
 export const timeline = [
@@ -40,6 +48,7 @@ export const timeline = [
 export const projects = [
   {
     title: 'Pygame: O Quebra-Nozes',
+    category: 'Game Dev',
     description:
       'Jogo inspirado no balé clássico com 5 fases únicas e mapa overworld. Desenvolvido em Pygame com animações frame-by-frame, telas personalizadas e mecânicas exclusivas por fase.',
     images: [
@@ -53,6 +62,7 @@ export const projects = [
   },
   {
     title: 'Site Informar - GAS',
+    category: 'Web Development',
     description:
       'Plataforma educacional desenvolvida para o Insper Code em parceria com o projeto GAS. Sistema responsivo com React, FastAPI, PostgreSQL e deploy na Vercel.',
     images: [
@@ -63,6 +73,7 @@ export const projects = [
   },
   {
     title: 'Help the Fox',
+    category: 'Interactive Game',
     description:
       'Escape Room desenvolvido para o Insper Code a fim de arrecadar fundos para o Programa de Bolsas. O jogo em Godot mescla ambientes físicos e digitais e possui artes e minigames autorais.',
     images: [
@@ -74,6 +85,7 @@ export const projects = [
   },
   {
     title: 'Plataforma de Questionários - Sono 360',
+    category: 'Full-stack App',
     description:
       'Aplicação Django desenvolvida por 6 estudantes em parceria com a empresa Sono 360. Permite envio de questionários, coleta de respostas e importação de dados via CSV.',
     images: [
